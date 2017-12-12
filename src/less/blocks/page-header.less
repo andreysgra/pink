@@ -1,0 +1,261 @@
+.page-header {
+  background-color: @darkblue;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 259px;
+  background-size: image-size("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  color: @white;
+
+  @media @retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 256px;
+    background-size: image-size("../img/bg-back-tablet@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-size: image-size("../img/bg-back-desktop@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  &--menu-closed {
+    background-position: 50% 0;
+
+    @media @tablet {
+      background-position: 50% 0;
+    }
+  }
+}
+
+.page-header--menu-closed .main-nav {
+  @media @tablet-only {
+    display: none;
+  }
+}
+
+.page-header__top {
+  background-color: @darkblue;
+
+  @media @desktop {
+    background-color: fade(@black, 30%);
+  }
+}
+
+.page-header--menu-closed .page-header__top {
+  @media @tablet-only {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.page-header__nav-wrapper {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+    background-color: transparent;
+  }
+}
+
+.page-header__panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 20px 23px 20px;
+  border-bottom: 1px solid @black;
+
+  @media @tablet {
+    padding-top: 26px;
+    padding-bottom: 43px;
+  }
+
+  @media @desktop {
+    padding-top: 27px;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+  }
+}
+
+.page-header--menu-closed .page-header__panel {
+  border-bottom: none;
+}
+
+.page-header__toggle {
+  position: relative;
+  align-self: flex-end;
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height: 24px;
+  background-color: transparent;
+
+  @media @desktop {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    width: 28px;
+    height: 4px;
+    background-color: @white;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @pink;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@pink, 30%);
+  }
+}
+
+.page-header__toggle--off {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 50px;
+    height: 4px;
+    background-color: @white;
+    box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover::before {
+    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
+  }
+
+  &:active::before {
+    box-shadow: 0 10px 0 0 fade(@pink, 30%), 0 20px 0 0 fade(@pink, 30%);
+  }
+}
+
+.page-header--no-js .page-header__toggle {
+  display: none;
+}
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__icon {
+  display: block;
+  width: 75px;
+  height: 22px;
+  fill: @white;
+
+  @media @tablet {
+    width: 150px;
+    height: 40px;
+  }
+
+  &--mobile {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet {
+      display: block;
+    }
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
+  }
+}
+
+.page-header__logo[href]:hover .page-header__icon {
+  fill: @pink;
+}
+
+.page-header__logo[href]:active .page-header__icon {
+  fill: fade(@white, 30%);
+}
+
+.page-header__title-wrapper {
+  padding-top: 15px;
+  padding-bottom: 67px;
+  .container();
+
+  @media @tablet {
+    padding-top: 34px;
+    padding-bottom: 107px;
+  }
+
+  @media @desktop {
+    padding-top: 30px;
+    padding-bottom: 67px;
+    max-width: 360px;
+  }
+
+  &--form {
+    padding-bottom: 39px;
+
+    @media @tablet {
+      padding-bottom: 47px;
+    }
+
+    @media @desktop {
+      padding-bottom: 67px;
+      max-width: none;
+    }
+  }
+}
+
+.page-header__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+
+  @media @tablet {
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,173 @@
+.gallery-post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 280px;
+
+  @media @tablet {
+    width: 300px;
+  }
+
+  @media @desktop {
+    margin-bottom: 54px;
+  }
+
+  &--panorama {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 320px;
+
+    @media @tablet {
+      width: auto;
+      margin-bottom: 50px;
+      max-width: 700px;
+    }
+
+    @media @desktop {
+      margin-bottom: 50px;
+      max-width: 1200px;
+    }
+
+    &::before {
+      content: attr(data-panorama-text);
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 20px;
+      padding: 6px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 24px;
+      color: @white;
+      text-transform: uppercase;
+      background-color: @pink;
+
+      @media @tablet {
+        top: 57px;
+        right: 20px;
+      }
+
+      @media @desktop {
+        top: 54px;
+        right: 129px;
+      }
+    }
+  }
+}
+
+.gallery-post__link {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+
+  & img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-post__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 19px 17px 18px;
+  background-color: @silver;
+
+  @media @tablet {
+    padding: 23px 31px 23px 27px;
+  }
+
+  &--panorama {
+    margin: 0 auto;
+    width: 280px;
+
+    @media @tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-right: 29px;
+      padding-bottom: 13px;
+      width: 620px;
+    }
+
+    @media @desktop {
+      padding-top: 24px;
+      padding-bottom: 11px;
+      padding-right: 32px;
+      width: 940px;
+    }
+  }
+}
+
+.gallery-post__author-name {
+  font-weight: bold;
+}
+
+.gallery-post__date,
+.gallery-post__like-count {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.gallery-post__date {
+  font-weight: 300;
+}
+
+.gallery-post__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 9px;
+
+  @media @tablet {
+    padding-bottom: 12px;
+    min-height: 48px;
+  }
+
+  &--panorama {
+    @media @tablet {
+      order: 2;
+      min-height: auto;
+    }
+  }
+}
+
+.gallery-post__likes {
+  display: flex;
+  align-items: center;
+
+  @media @tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &--panorama {
+    @media @tablet {
+      order: 1;
+    }
+  }
+}
+
+.gallery-post__like-btn {
+  display: block;
+  padding: 0;
+  width: 13px;
+  height: 12px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-heart.svg");
+  cursor: pointer;
+}
+
+.gallery-post__like-count {
+  margin-left: 19px;
+  color: @pink;
+
+  @media @tablet {
+    margin-left: 0;
+    margin-right: 17px;
+  }
+}

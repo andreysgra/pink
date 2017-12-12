@@ -1,0 +1,114 @@
+.store__content-wrapper {
+  padding-top: 395px;
+  padding-bottom: 16px;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-position: 0 109px;
+  background-size: image-size("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  .container();
+
+  @media @retina {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+
+  @media @tablet {
+    padding-top: 64px;
+    padding-bottom: 92px;
+    width: 620px;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: -20px 72px;
+    background-size: image-size("../img/iphone-hand-tablet@1x.png");
+
+    @media @retina {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
+  }
+
+  @media @desktop {
+    padding: 99px 10px 104px 10px;
+    width: 940px;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 26px 99px;
+    background-size: image-size("../img/iphone-hand-desktop@1x.png");
+
+    @media @retina {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
+  }
+}
+
+.store__content {
+  padding-top: 28px;
+
+  @media @tablet {
+    width: 300px;
+  }
+
+  @media @desktop {
+    padding-top: 9px;
+  }
+}
+
+.store__title {
+  display: none;
+  margin: 0 auto;
+  width: 240px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+
+  @media @tablet {
+    display: block;
+    margin-bottom: 31px;
+    font-size: 40px;
+  }
+
+  @media @desktop {
+    margin-bottom: 53px;
+    font-size: 50px;
+  }
+}
+
+.store__button {
+  width: 100%;
+}
+
+.store__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  .list-reset();
+
+  @media @tablet {
+    margin-top: 47px;
+    margin-bottom: 35px;
+  }
+
+  @media @desktop {
+    margin-top: 66px;
+    margin-bottom: 56px;
+  }
+}
+
+.store__item {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.store__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 56px;
+}
+
+.store__description {
+  margin-top: 21px;
+  font-weight: 300;
+  text-align: center;
+
+  @media @tablet {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,91 @@
+.btn {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  font-style: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--rounded-corners {
+    padding: 15px;
+    width: 100%;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 30px;
+    line-height: 18px;
+    background-color: transparent;
+  }
+
+  &--squared-corners {
+    padding: 16px 15px;
+    width: 100%;
+    border-radius: 2px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &--white {
+    border-color: @white;
+    color: @white;
+  }
+
+  &--white:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &--white:active {
+    color: fade(@pink, 30%);
+  }
+
+  &--red {
+    border-color: @pink;
+    color: @pink;
+  }
+
+  &--red:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &--red:active {
+    color: fade(@white, 30%);
+    background-color: @pink;
+  }
+
+  &--gray {
+    border-color: fade(@darkblue, 10%);
+    color: @gray;
+  }
+
+  &--gray:hover {
+    border-color: fade(@darkblue, 30%);
+    color: fade(@darkblue, 30%);
+  }
+
+  &--gray:active {
+    border-color: fade(@darkblue, 0%);
+    color: fade(@white, 30%);
+    background-color: fade(@darkblue, 30%);
+  }
+
+  &--green {
+    color: @white;
+    background-color: @green;
+  }
+
+  &--green:hover {
+    background-color: #1c9b5e;
+  }
+
+  &--green:active {
+    color: fade(@white, 30%);
+  }
+
+  &--disabled {
+    background-color: @lightgray;
+  }
+}

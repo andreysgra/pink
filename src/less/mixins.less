@@ -1,0 +1,22 @@
+.list-reset() {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.container() {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 280px;
+
+  @media @tablet {
+    width: 620px;
+  }
+
+  @media @desktop {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+  }
+}

@@ -1,0 +1,64 @@
+.main-nav {
+  @media @desktop {
+    width: 620px;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+  padding: 15px 20px;
+  border-top: 1px solid fade(@white, 15%);
+  border-bottom: 1px solid @black;
+  text-align: center;
+
+  @media @desktop {
+    padding: 0;
+    border: 0;
+  }
+
+  &--active::after {
+    @media @desktop {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: @white;
+    }
+  }
+}
+
+.main-nav__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  @media @desktop {
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+  }
+
+  &[href]:hover {
+    color: @pink;
+  }
+
+  &[href]:active {
+    color: fade(@pink, 30%);
+
+    @media @desktop {
+      color: fade(@white, 30%);
+    }
+  }
+}

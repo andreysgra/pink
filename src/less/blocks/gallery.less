@@ -1,0 +1,15 @@
+.gallery {
+  padding-top: 15px;
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-direction: column;
+  .container();
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
