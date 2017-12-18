@@ -1,5 +1,5 @@
 .page-header {
-  background-color: @darkblue;
+  background-color: @bg-color-header;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 259px;
   background-size: image-size("../img/bg-back-mobile@1x.jpg");
@@ -46,7 +46,7 @@
 }
 
 .page-header__top {
-  background-color: @darkblue;
+  background-color: @bg-color-header;
 
   @media @desktop {
     background-color: fade(@black, 30%);
@@ -55,7 +55,7 @@
 
 .page-header--menu-closed .page-header__top {
   @media @tablet-only {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: fade(@black, 30%);
   }
 }
 
