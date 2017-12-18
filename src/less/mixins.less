@@ -1,6 +1,6 @@
-.list-reset() {
+.list-reset(@padding-left: 0) {
   margin: 0;
-  padding-left: 0;
+  padding-left: @padding-left;
   list-style: none;
 }
 
@@ -19,4 +19,25 @@
     padding-right: 10px;
     width: 940px;
   }
+}
+
+// Photoshop Drop Shadow
+.ps-drop-shadow(@color: #000000; @opacity: 0%; @angel: 0deg; @distance: 0; @spread: 0; @size: 0; @inner: false) {
+  @radian: (180 - unit(@angel)) * (pi() / 180);            // перевод градусов в радианы
+
+  @offset-x: unit(round(cos(@radian) * @distance), px);    // сдвиг по оси X
+  @offset-y: unit(round(sin(@radian) * @distance), px);    // сдвиг по оси Y
+  @blur-radius: unit(@size - @size * @spread / @size, px); // размытие
+
+  .getInset() when (@inner = true) {
+    @inset: ~"inset";
+  }
+
+  .getInset() when (default()) {
+    @inset: ~"";
+  }
+
+  .getInset();
+
+  box-shadow: @offset-x @offset-y @blur-radius unit(@spread, px) fade(@color, @opacity) @inset;
 }

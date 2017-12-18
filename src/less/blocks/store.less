@@ -1,11 +1,12 @@
 .store__content-wrapper {
+  .container();
+
   padding-top: 395px;
   padding-bottom: 16px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 0 109px;
   background-size: image-size("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
-  .container();
 
   @media @retina {
     background-image: url("../img/iphone-hand-mobile@2x.png");
@@ -76,8 +77,9 @@
 .store__list {
   display: flex;
   justify-content: center;
-  margin-top: 33px;
   .list-reset();
+
+  margin-top: 33px;
 
   @media @tablet {
     margin-top: 47px;
