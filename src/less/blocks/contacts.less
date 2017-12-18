@@ -1,8 +1,9 @@
 .contacts {
+  .container();
+
   padding-top: 19px;
   padding-bottom: 40px;
   text-align: center;
-  .container();
 
   @media @tablet {
     padding-top: 46px;
@@ -32,8 +33,9 @@
 }
 
 .contacts__list {
-  padding-top: 10px;
   .list-reset();
+
+  padding-top: 10px;
 
   @media @tablet {
     display: flex;
@@ -107,11 +109,11 @@
   color: @pink;
 
   &--link:hover {
-    color: @darkblue;
+    color: @bg-color-header;
     text-decoration: underline;
   }
 
   &--link:active {
-    color: fade(@darkblue, 30%);
+    color: fade(@bg-color-header, 30%);
   }
 }
