@@ -106,6 +106,24 @@ module.exports = function(grunt) {
             dest: 'build/img'
           }
         ]
+      },
+      webp: {
+        options: {
+          use: [
+            require('imagemin-webp')({
+              quality: 70
+            })
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img/content',
+            src: ['**/*.jpg'],
+            dest: 'build/img/content',
+            ext: '.webp'
+          }
+        ]
       }
     },
 
