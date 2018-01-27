@@ -1,14 +1,14 @@
 {
   "name": "pink",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Проект «Пинк» от HTML Academy",
   "main": "index.js",
   "scripts": {
-    "stylelint": "stylelint \"src/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint src/less/**/*.less --syntax less",
     "test": "grunt lintspaces && npm run stylelint",
     "build": "grunt build",
     "start": "npm run build && grunt serve",
-    "deploy": "npm run build && grunt gh-pages"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,9 @@
   "author": "Andrey Grachev <andreysgra@gmail.com> (https://github.com/andreysgra)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
-    "css-mqpacker": "^6.0.1",
+    "autoprefixer": "^7.2.5",
+    "css-mqpacker": "^6.0.2",
+    "gh-pages": "^1.1.0",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.1.0",
@@ -26,17 +27,16 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-less": "^1.4.1",
-    "grunt-contrib-uglify": "^3.1.0",
+    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-csso": "^2.2.0",
-    "grunt-gh-pages": "^2.0.0",
     "grunt-lintspaces": "^0.8.1",
     "grunt-postcss": "^0.9.0",
     "grunt-svgstore": "^1.0.0",
-    "imagemin-jpegoptim": "^5.1.0",
-    "imagemin-webp": "^4.0.0",
+    "imagemin-jpegoptim": "^5.2.0",
+    "imagemin-webp": "^4.1.0",
     "load-grunt-tasks": "^3.5.2",
-    "stylelint": "^8.2.0",
+    "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
