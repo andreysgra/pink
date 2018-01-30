@@ -1,7 +1,7 @@
-.store__content-wrapper {
+.store {
   .container();
 
-  padding-top: 395px;
+  padding-top: 423px;
   padding-bottom: 16px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 0 109px;
@@ -13,7 +13,7 @@
   }
 
   @media @tablet {
-    padding-top: 64px;
+    padding-top: 92px;
     padding-bottom: 92px;
     width: 620px;
     background-image: url("../img/iphone-hand-tablet@1x.png");
@@ -26,7 +26,7 @@
   }
 
   @media @desktop {
-    padding: 99px 10px 104px 10px;
+    padding: 108px 10px 104px 10px;
     width: 940px;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 26px 99px;
@@ -39,14 +39,8 @@
 }
 
 .store__content {
-  padding-top: 28px;
-
   @media @tablet {
     width: 300px;
-  }
-
-  @media @desktop {
-    padding-top: 9px;
   }
 }
 
@@ -71,7 +65,21 @@
 }
 
 .store__button {
-  width: 100%;
+  border-color: @white;
+  color: @white;
+
+  @media @desktop {
+    font-size: 21px;
+  }
+
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
 }
 
 .store__list {
@@ -93,15 +101,15 @@
 }
 
 .store__item {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .store__link {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 47px;
+  align-items: flex-end;
+  width: 56px;
   height: 56px;
 }
 
