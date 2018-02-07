@@ -8,84 +8,80 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="page-header page-header--no-js">
-    <div class="page-header__top">
-      <div class="page-header__nav-wrapper">
-        <div class="page-header__panel">
-          <a class="page-header__logo">
-            <svg class="page-header__icon page-header__icon--mobile">
+  <header class="page-header">
+    <div class="page-header__nav-wrapper">
+      <nav class="main-nav page-header__main-nav main-nav--no-js">
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo">
+            <svg class="main-nav__image main-nav__image--mobile">
               <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
             </svg>
-            <svg class="page-header__icon page-header__icon--tablet">
+            <svg class="main-nav__image main-nav__image--tablet">
               <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
             </svg>
-            <svg class="page-header__icon page-header__icon--desktop">
+            <svg class="main-nav__image main-nav__image--desktop">
               <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
             </svg>
           </a>
 
-          <button class="page-header__toggle page-header__toggle--off" type="button">
+          <button class="main-nav__toggle main-nav__toggle--off" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
         </div>
 
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="photo.html">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <h1 class="visually-hidden">Приложение Pink</h1>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
-    <div class="store">
-      <div class="store__content-wrapper">
-        <div class="store__content">
-          <p class="store__title">Взгляните на жизнь иначе!</p>
+    <h1 class="visually-hidden">Приложение Pink</h1>
 
-          <a class="btn btn--rounded-corners btn--white" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+    <div class="page-header__store store">
+      <div class="store__content">
+        <p class="store__title">Взгляните на жизнь иначе!</p>
 
-          <ul class="store__list">
-            <li class="store__item">
-              <a class="store__link store__link--ios" href="https://www.apple.com/ru/ios/app-store/">
-                <span class="visually-hidden">iOS</span>
-                <svg class="store__icon" width="47" height="56">
-                  <use xlink:href="img/symbols.svg#logo-apple"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="store__item">
-              <a class="store__link store__link--android" href="https://play.google.com/store">
-                <span class="visually-hidden">Android</span>
-                <svg class="store__icon" width="43" height="47">
-                  <use xlink:href="img/symbols.svg#logo-android"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="store__item">
-              <a class="store__link store__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
-                <span class="visually-hidden">Windows</span>
-                <svg class="store__icon" width="44" height="41">
-                  <use xlink:href="img/symbols.svg#logo-microsoft"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <a class="button button--rounded store__button" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
 
-          <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
+        <ul class="store__list">
+          <li class="store__item">
+            <a class="store__link store__link--ios" href="https://www.apple.com/ru/ios/app-store/">
+              <span class="visually-hidden">iOS</span>
+              <svg class="store__icon" width="46" height="56">
+                <use xlink:href="img/symbols.svg#logo-apple"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link store__link--android" href="https://play.google.com/store">
+              <span class="visually-hidden">Android</span>
+              <svg class="store__icon" width="42" height="47">
+                <use xlink:href="img/symbols.svg#logo-android"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link store__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+              <span class="visually-hidden">Windows</span>
+              <svg class="store__icon" width="44" height="42">
+                <use xlink:href="img/symbols.svg#logo-microsoft"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </div>
     </div>
   </header>
@@ -143,38 +139,38 @@
         </div>
 
         <div class="reviews__slide">
-          <p class="reviews__author">Николай Петров</p>
+          <p class="reviews__author">Иван Помидоров</p>
+          <p class="reviews__author-description">30 лет, геолог</p>
           <blockquote class="reviews__text">
-            <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+            <q>В общем эта штука испортила всю мою жизнь. Сначала моя жена переписывалась с кем-то в комментариях, а потом взяла и ушла от меня :-(</q>
           </blockquote>
         </div>
 
         <div class="reviews__slide">
-          <p class="reviews__author">Николай Петров</p>
+          <p class="reviews__author">Василий Степанович</p>
+          <p class="reviews__author-description">80 лет, пенсионер</p>
           <blockquote class="reviews__text">
-            <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+            <q>А куда тут тыкать то надо? Ничё не понял!</q>
           </blockquote>
         </div>
 
-        <div class="reviews__slider-controls">
-          <div class="slider-controls">
-            <button class="slider-controls__btn slider-controls__btn--active" type="button">
-              <span class="visually-hidden">1</span>
-            </button>
-            <button class="slider-controls__btn" type="button">
-              <span class="visually-hidden">2</span>
-            </button>
-            <button class="slider-controls__btn" type="button">
-              <span class="visually-hidden">3</span>
-            </button>
-          </div>
+        <div class="slider-controls reviews__slider-controls">
+          <button class="slider-controls__button slider-controls__button--active" type="button">
+            <span class="visually-hidden">1</span>
+          </button>
+          <button class="slider-controls__button" type="button">
+            <span class="visually-hidden">2</span>
+          </button>
+          <button class="slider-controls__button" type="button">
+            <span class="visually-hidden">3</span>
+          </button>
         </div>
 
         <div class="reviews__slider-nav">
-          <button class="reviews__slider-btn reviews__slider-btn--prev" type="button">
+          <button class="reviews__slider-button reviews__slider-button--prev" type="button">
             <span class="visually-hidden">Назад</span>
           </button>
-          <button class="reviews__slider-btn reviews__slider-btn--next" type="button">
+          <button class="reviews__slider-button reviews__slider-button--next" type="button">
             <span class="visually-hidden">Вперёд</span>
           </button>
         </div>
@@ -185,104 +181,120 @@
       <h2 class="visually-hidden">Стоимость приложения</h2>
 
       <div class="price__slider">
-        <table class="price-table">
+        <table class="table-price price-table">
           <thead>
-            <tr class="price-table__row">
-              <th class="price-table__header">
+            <tr>
+              <th class="table-price__header">
               </th>
-              <th class="price-table__header">
-                <span class="price-table__license-type">База</span>
-                <span class="price-table__license-price">1,99 USD</span>
+              <th class="table-price__header">
+                <span class="table-price__license-type">База</span>
+                <span class="table-price__license-price">1,99 USD</span>
               </th>
-              <th class="price-table__header price-table__header--hit">
-                <span class="price-table__license-type">Стандарт</span>
-                <span class="price-table__license-price">3,99 USD</span>
+              <th class="table-price__header table-price__header--hit">
+                <span class="table-price__license-type">Стандарт</span>
+                <span class="table-price__license-price">3,99 USD</span>
               </th>
-              <th class="price-table__header">
-                <span class="price-table__license-type">Анлим</span>
-                <span class="price-table__license-price">9,99 USD</span>
+              <th class="table-price__header">
+                <span class="table-price__license-type">Анлим</span>
+                <span class="table-price__license-price">9,99 USD</span>
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr class="price-table__row">
-              <td class="price-table__cell">Розовый фильтр</td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Розовый фильтр">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+            <tr>
+              <td class="table-price__cell">Розовый фильтр</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Розовый фильтр">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Розовый фильтр">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Розовый фильтр">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
               </td>
             </tr>
 
-            <tr class="price-table__row">
-              <td class="price-table__cell">Смайлики</td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Смайлики">
-                  <span class="price-table__feature-value price-table__feature-value--false">Нет</span>
+            <tr>
+              <td class="table-price__cell">Смайлики</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--false">
+                    <span class="visually-hidden">Нет</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Смайлики">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Смайлики">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Смайлики">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
 
               </td>
             </tr>
 
-            <tr class="price-table__row">
-              <td class="price-table__cell">Комментарии</td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Комментарии">
-                  <span class="price-table__feature-value price-table__feature-value--false">Нет</span>
+            <tr>
+              <td class="table-price__cell">Комментарии</td>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--false">
+                    <span class="visually-hidden">Нет</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Комментарии">
-                  <span class="price-table__feature-value price-table__feature-value--false">Нет</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--false">
+                    <span class="visually-hidden">Нет</span>
+                  </span>
                 </div>
               </td>
-              <td class="price-table__cell">
-                <div class="price-table__feature" data-feature-name="Комментарии">
-                  <span class="price-table__feature-value price-table__feature-value--true">Да</span>
+              <td class="table-price__cell">
+                <div class="table-price__feature" data-feature-name="Комментарии">
+                  <span class="table-price__feature-value table-price__feature-value--true">
+                    <span class="visually-hidden">Да</span>
+                  </span>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <div class="price__slider-controls">
-          <div class="slider-controls">
-            <button class="slider-controls__btn" type="button">
-              <span class="visually-hidden">1</span>
-            </button>
-            <button class="slider-controls__btn slider-controls__btn--active" type="button">
-              <span class="visually-hidden">2</span>
-            </button>
-            <button class="slider-controls__btn" type="button">
-              <span class="visually-hidden">3</span>
-            </button>
-          </div>
+        <div class="slider-controls price__slider-controls">
+          <button class="slider-controls__button" type="button">
+            <span class="visually-hidden">1</span>
+          </button>
+          <button class="slider-controls__button slider-controls__button--active" type="button">
+            <span class="visually-hidden">2</span>
+          </button>
+          <button class="slider-controls__button" type="button">
+            <span class="visually-hidden">3</span>
+          </button>
         </div>
-      </div>
+        </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts page-main__contacts">
       <h2 class="visually-hidden">Контакты</h2>
 
       <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
@@ -312,10 +324,10 @@
   <footer class="page-footer page-footer--index">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo">
-        <svg class="page-footer__icon page-footer__icon--mobile">
+        <svg class="page-footer__image page-footer__image--mobile">
           <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
         </svg>
-        <svg class="page-footer__icon page-footer__icon--tablet">
+        <svg class="page-footer__image page-footer__image--tablet">
           <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
         </svg>
       </a>
