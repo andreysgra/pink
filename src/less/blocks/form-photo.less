@@ -1,40 +1,44 @@
-.post-form {
+.form-photo {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 30px;
   width: 280px;
+  background-color: @silver;
 
   @media @tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 57px;
+    padding-top: 41px;
     padding-bottom: 28px;
     width: 620px;
   }
 
   @media @desktop {
-    padding: 55px 60px 55px 80px;
+    padding: 41px 60px 57px 80px;
     width: 940px;
   }
 }
 
-.post-form__preview {
-  padding-bottom: 20px;
-  font-size: 0;
-  line-height: 0;
+.form-photo__preview {
+  overflow: hidden;
+  width: 280px;
+  height: 374px;
 
   @media @tablet {
-    padding-bottom: 0;
+    padding-top: 16px;
     width: 300px;
+    height: 400px;
   }
 }
 
-.post-form__content {
+.form-photo__content {
   box-sizing: border-box;
+  margin-top: 20px;
 
   @media @tablet {
+    margin-top: 0;
     width: 275px;
   }
 
@@ -43,49 +47,54 @@
   }
 }
 
-.post-form__filters {
-  margin-bottom: 39px;
+.form-photo__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.form-photo__filters {
+  margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
 
   @media @tablet {
-    margin-bottom: 71px;
+    margin-bottom: 66px;
     padding-left: 0;
     padding-right: 0;
   }
 
   @media @desktop {
-    margin-bottom: 153px;
+    margin-bottom: 145px;
   }
 }
 
-.post-form__filters-buttons {
+.form-photo__filters-buttons {
   display: flex;
   justify-content: space-around;
   width: 240px;
   padding-top: 22px;
-  padding-bottom: 28px;
+  padding-bottom: 1px;
 
   @media @tablet {
     display: none;
   }
 }
 
-.post-form__filter-btn {
+.form-photo__filter-button {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0;
   width: 48px;
-  height: 44px;
+  height: 48px;
   border: 0;
-  text-align: center;
   background-color: transparent;
   cursor: pointer;
 }
 
-.post-form__icon {
+.form-photo__icon {
   display: block;
   fill: fade(@bg-color-header, 30%);
 
@@ -94,49 +103,76 @@
   }
 }
 
-.post-form__filter-btn--current .post-form__icon {
+.form-photo__filter-button--active .form-photo__icon,
+.form-photo__filter-button:active .form-photo__icon {
   fill: @pink;
 }
 
-.post-form__filter-btn:active .post-form__icon {
-  fill: @pink;
-}
-
-.post-form__filter-btn:not(.post-form__filter-btn--current):hover .post-form__icon {
+.form-photo__filter-button:not(.form-photo__filter-button--active):hover .form-photo__icon {
   fill: fade(@bg-color-header, 50%);
 }
 
-.post-form__scale-wrapper {
+.form-photo__scale-wrapper {
+  position: relative;
   display: none;
-  padding-top: 11px;
-  padding-bottom: 34px;
-  border-bottom: 1px solid @gray;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 
   @media @tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 17px;
-    padding: 9px 18px 24px 3px;
+    padding-right: 18px;
+    padding-left: 3px;
+    height: 72px;
   }
 
   @media @desktop {
-    margin-bottom: 17px;
-    padding: 0 30px 13px 2px;
+    padding-right: 30px;
+    padding-left: 0;
+    height: 72px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+    width: ~"calc(100% + 40px * 2)";
+    height: 1px;
+    background-color: @gray;
+
+    @media @tablet {
+      left: 0;
+      width: 100%;
+    }
   }
 
   &--current {
-    display: block;
+    display: flex;
   }
 }
 
-.post-form__filter-icon {
+.form-photo__icon-wrapper {
   display: none;
+  justify-content: center;
+  align-items: center;
 
   @media @tablet {
-    display: block;
-    fill: @pink;
+    display: flex;
+    width: 24px;
+    height: 24px;
   }
+
+  @media @desktop {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.form-photo__filter-icon {
+  fill: @pink;
 
   &--crop {
     @media @tablet {
@@ -175,8 +211,9 @@
   }
 }
 
-.post-form__filter-scale {
+.form-photo__filter-scale {
   position: relative;
+  width: 100%;
   height: 2px;
   background-color: @bg-color-header;
 
@@ -189,7 +226,7 @@
   }
 }
 
-.post-form__handle {
+.form-photo__handle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -217,7 +254,7 @@
   }
 }
 
-.post-form__buttons {
+.form-photo__buttons {
   display: flex;
   flex-direction: column;
 
@@ -234,7 +271,7 @@
   }
 }
 
-.post-form__button {
+.form-photo__button {
   margin-bottom: 12px;
 
   @media @tablet {

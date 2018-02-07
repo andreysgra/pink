@@ -1,6 +1,5 @@
 .map {
   position: relative;
-  margin: 0 auto;
   height: 200px;
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-position: 50% 100%;
@@ -12,7 +11,7 @@
   }
 
   @media @tablet {
-    height: 373px;
+    height: 374px;
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-position: 50% 73.2%;
     background-size: image-size("../img/bg-map-tablet@1x.jpg");
@@ -23,8 +22,7 @@
   }
 
   @media @desktop {
-    padding-top: 22px;
-    height: 503px;
+    height: 505px;
     background-image: url("../img/bg-map-desktop@1x.jpg");
     background-position: 50% 57%;
     background-size: image-size("../img/bg-map-desktop@1x.jpg");
@@ -41,11 +39,21 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 11vw;
+    height: 33px;
     background-image: url("../img/bg-triangle-white-footer.svg");
-    background-size: 100% auto;
-    background-position: center 0;
+    background-size: 100% 33px;
+    background-position: 50% 0;
     background-repeat: no-repeat;
+
+    @media @tablet {
+      height: 67px;
+      background-size: 100% 67px;
+    }
+
+    @media @desktop {
+      height: 104px;
+      background-size: 100% 104px;
+    }
   }
 }
 

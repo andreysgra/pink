@@ -12,8 +12,8 @@
     padding-bottom: 30px;
     background-image: url("../img/icon-quotes.svg");
     background-repeat: no-repeat;
-    background-position: 50% 73px;
-    background-size: 79px 63px;
+    background-position: 50% 72px;
+    background-size: 79px 64px;
   }
 }
 
@@ -86,17 +86,22 @@
 }
 
 .reviews__quote {
-  @media @desktop {
-    &::before,
-    &::after {
-      content: "";
-    }
+  &::before {
+    content: "\00ab";
+  }
+
+  &::after {
+    content: "\00bb";
   }
 }
 
 .reviews__slider-controls {
   margin-top: 33px;
   margin-bottom: 20px;
+
+  @media @tablet {
+    margin-top: 31px;
+  }
 
   @media @desktop {
     display: none;
@@ -116,7 +121,7 @@
   }
 }
 
-.reviews__slider-btn {
+.reviews__slider-button {
   position: relative;
   display: inline-block;
   vertical-align: middle;

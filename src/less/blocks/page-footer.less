@@ -1,7 +1,7 @@
 .page-footer {
   @media @desktop {
-    padding-top: 32px;
-    padding-bottom: 35px;
+    padding-top: 34px;
+    padding-bottom: 36px;
   }
 
   &--index {
@@ -17,9 +17,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
   .container();
+
+  padding-top: 40px;
+  padding-bottom: 41px;
 
   @media @tablet {
     flex-direction: row;
@@ -32,15 +33,13 @@
 
 .page-footer__logo {
   display: block;
-
-  @media @tablet {
-    align-self: self-start;
-  }
+  width: 147px;
+  height: 51px;
 }
 
-.page-footer__icon {
+.page-footer__image {
   display: block;
-  width: 150px;
+  width: 147px;
   height: 40px;
   fill: @bg-color-header;
 
@@ -59,21 +58,21 @@
   }
 }
 
-.page-footer__logo[href]:hover .page-footer__icon {
+.page-footer__logo[href]:hover .page-footer__image {
   fill: @pink;
 }
 
-.page-footer__logo[href]:active .page-footer__icon {
+.page-footer__logo[href]:active .page-footer__image {
   fill: fade(@bg-color-header, 30%);
 }
 
 .page-footer__social {
   width: 280px;
-  padding-top: 38px;
-  padding-bottom: 38px;
+  padding-top: 28px;
+  padding-bottom: 39px;
 
   @media @tablet {
-    width: 320px;
+    width: 300px;
     padding-top: 0;
     padding-bottom: 0;
   }

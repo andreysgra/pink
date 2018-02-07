@@ -8,44 +8,42 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="page-header page-header--no-js">
-    <div class="page-header__top">
-      <div class="page-header__nav-wrapper">
-        <div class="page-header__panel">
-          <a class="page-header__logo" href="index.html">
-            <svg class="page-header__icon page-header__icon--mobile">
-              <use class="" xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
+  <header class="page-header">
+    <div class="page-header__nav-wrapper">
+      <nav class="main-nav page-header__main-nav main-nav--no-js">
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo" href="index.html">
+            <svg class="main-nav__image main-nav__image--mobile">
+              <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
             </svg>
-            <svg class="page-header__icon page-header__icon--tablet">
-              <use class="" xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
+            <svg class="main-nav__image main-nav__image--tablet">
+              <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
             </svg>
-            <svg class="page-header__icon page-header__icon--desktop">
-              <use class="" xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
+            <svg class="main-nav__image main-nav__image--desktop">
+              <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
             </svg>
           </a>
 
-          <button class="page-header__toggle page-header__toggle--off" type="button">
+          <button class="main-nav__toggle main-nav__toggle--off" type="button">
             <span class="visually-hidden">Меню</span>
           </button>
         </div>
 
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link">Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div class="page-header__title-wrapper">
@@ -55,318 +53,330 @@
 
   <main class="page-inner">
     <div class="page-inner__titles">
-      <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи! <br class="tablet-hidden">Видите, как не хватает ваших?</p>
     </div>
 
     <section class="gallery">
       <h2 class="visually-hidden">Галерея фотографий</h2>
 
-      <article class="gallery-post gallery-post--panorama" data-panorama-text="Панорама дня">
+      <article class="photo photo--full gallery__photo gallery__photo--full">
         <h3 class="visually-hidden">Сообщение пользователя Анна</h3>
 
-        <a class="gallery-post__link gallery-post__link--panorama" href="#">
+        <a class="photo__link photo__link--full" href="#" data-panorama="Панорама дня">
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/content/panorama-desktop@1x.webp 1x, img/content/panorama-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/content/panorama-tablet@1x.webp 1x, img/content/panorama-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/content/panorama-mobile@1x.webp 1x, img/content/panorama-mobile@2x.webp 2x">
+
             <source media="(min-width: 960px)" srcset="img/content/panorama-desktop@1x.jpg 1x, img/content/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/content/panorama-tablet@1x.jpg 1x, img/content/panorama-tablet@2x.jpg 2x">
-            <img src="img/content/panorama-mobile@1x.jpg" srcset="img/content/panorama-mobile@2x.jpg 2x" alt="Фотография дня">
+            <img class="photo__image" src="img/content/panorama-mobile@1x.jpg" srcset="img/content/panorama-mobile@2x.jpg 2x" alt="Фотография дня">
           </picture>
         </a>
 
-        <div class="gallery-post__content gallery-post__content--panorama">
-          <div class="gallery-post__author">
-            <b class="gallery-post__author-name">Анна</b>
-            <time class="gallery-post__date" datetime="2017-09-22T19:00">(5 минут назад)</time>
+        <div class="photo__content photo__content--full">
+          <div class="photo__author">
+            <b class="photo__author-name">Анна</b>
+            <time class="photo__date" datetime="2017-09-22T19:00">(5 минут назад)</time>
           </div>
 
-          <p class="gallery-post__text gallery-post__text--panorama">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <p class="photo__text photo__text--full">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
 
-          <div class="gallery-post__likes gallery-post__likes--panorama">
-            <button class="gallery-post__like-btn" type="button">
+          <div class="photo__likes photo__likes--full">
+            <button class="photo__like-button" type="button">
               <span class="visually-hidden">Нравится!</span>
             </button>
 
-            <span class="gallery-post__like-count">Нравится: 215</span>
+            <span class="photo__like-count">Нравится: 215</span>
           </div>
         </div>
       </article>
 
       <div class="gallery__wrapper">
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Левон</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-1-desktop@1x.webp 1x, img/content/photo-1-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-1-tablet@1x.jpg.webp 1x, img/content/photo-1-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-1-tablet@1x.webp 1x, img/content/photo-1-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-1-mobile@1x.webp 1x, img/content/photo-1-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-1-desktop@1x.jpg 1x, img/content/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-1-tablet@1x.jpg 1x, img/content/photo-1-tablet@2x.jpg 2x">
-              <img src="img/content/photo-1-mobile@1x.jpg" srcset="img/content/photo-1-mobile@2x.jpg 2x" alt="Фото 1">
+              <img class="photo__image" src="img/content/photo-1-mobile@1x.jpg" srcset="img/content/photo-1-mobile@2x.jpg 2x" alt="Фото 1">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Левон</b>
-              <time class="gallery-post__date" datetime="2017-09-22T14:00">(5 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Левон</b>
+              <time class="photo__date" datetime="2017-09-22T14:00">(5 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 356</span>
+              <span class="photo__like-count">Нравится: 356</span>
             </div>
           </div>
         </article>
 
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Антон</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-2-desktop@1x.webp 1x, img/content/photo-2-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-2-tablet@1x.jpg.webp 1x, img/content/photo-2-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-2-tablet@1x.webp 1x, img/content/photo-2-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-2-mobile@1x.webp 1x, img/content/photo-2-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-2-desktop@1x.jpg 1x, img/content/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-2-tablet@1x.jpg 1x, img/content/photo-2-tablet@2x.jpg 2x">
-              <img src="img/content/photo-2-mobile@1x.jpg" srcset="img/content/photo-2-mobile@2x.jpg 2x" alt="Фото 2">
+              <img class="photo__image" src="img/content/photo-2-mobile@1x.jpg" srcset="img/content/photo-2-mobile@2x.jpg 2x" alt="Фото 2">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Антон</b>
-              <time class="gallery-post__date" datetime="2017-09-22T07:00">(12 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Антон</b>
+              <time class="photo__date" datetime="2017-09-22T07:00">(12 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Соседи будут рады!</p>
+            <p class="photo__text">Соседи будут рады!</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 666</span>
+              <span class="photo__like-count">Нравится: 666</span>
             </div>
           </div>
         </article>
 
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Борис</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-3-desktop@1x.webp 1x, img/content/photo-3-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-3-tablet@1x.jpg.webp 1x, img/content/photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-3-tablet@1x.webp 1x, img/content/photo-3-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-3-mobile@1x.webp 1x, img/content/photo-3-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-3-desktop@1x.jpg 1x, img/content/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-3-tablet@1x.jpg 1x, img/content/photo-3-tablet@2x.jpg 2x">
-              <img src="img/content/photo-3-mobile@1x.jpg" srcset="img/content/photo-3-mobile@2x.jpg 2x" alt="Фото 3">
+              <img class="photo__image" src="img/content/photo-3-mobile@1x.jpg" srcset="img/content/photo-3-mobile@2x.jpg 2x" alt="Фото 3">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Борис</b>
-              <time class="gallery-post__date" datetime="2017-09-21T23:00">(20 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Борис</b>
+              <time class="photo__date" datetime="2017-09-21T23:00">(20 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 215</span>
+              <span class="photo__like-count">Нравится: 215</span>
             </div>
           </div>
         </article>
 
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Сергей</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-4-desktop@1x.webp 1x, img/content/photo-4-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-4-tablet@1x.jpg.webp 1x, img/content/photo-4-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-4-tablet@1x.webp 1x, img/content/photo-4-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-4-mobile@1x.webp 1x, img/content/photo-4-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-4-desktop@1x.jpg 1x, img/content/photo-4-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-4-tablet@1x.jpg 1x, img/content/photo-4-tablet@2x.jpg 2x">
-              <img src="img/content/photo-4-mobile@1x.jpg" srcset="img/content/photo-4-mobile@2x.jpg 2x" alt="Фото 4">
+              <img class="photo__image" src="img/content/photo-4-mobile@1x.jpg" srcset="img/content/photo-4-mobile@2x.jpg 2x" alt="Фото 4">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Сергей</b>
-              <time class="gallery-post__date" datetime="2017-09-21T18:00">(25 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Сергей</b>
+              <time class="photo__date" datetime="2017-09-21T18:00">(25 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Самая кубанская в мире!</p>
+            <p class="photo__text">Самая кубанская в мире!</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 4</span>
+              <span class="photo__like-count">Нравится: 4</span>
             </div>
           </div>
         </article>
 
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Максим</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-5-desktop@1x.webp 1x, img/content/photo-5-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-5-tablet@1x.jpg.webp 1x, img/content/photo-5-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-5-tablet@1x.webp 1x, img/content/photo-5-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-5-mobile@1x.webp 1x, img/content/photo-5-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-5-desktop@1x.jpg 1x, img/content/photo-5-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-5-tablet@1x.jpg 1x, img/content/photo-5-tablet@2x.jpg 2x">
-              <img src="img/content/photo-5-mobile@1x.jpg" srcset="img/content/photo-5-mobile@2x.jpg 2x" alt="Фото 5">
+              <img class="photo__image" src="img/content/photo-5-mobile@1x.jpg" srcset="img/content/photo-5-mobile@2x.jpg 2x" alt="Фото 5">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Максим</b>
-              <time class="gallery-post__date" datetime="2017-09-21T03:00">(40 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Максим</b>
+              <time class="photo__date" datetime="2017-09-21T03:00">(40 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Где снег-то?</p>
+            <p class="photo__text">Где снег-то?</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 150</span>
+              <span class="photo__like-count">Нравится: 150</span>
             </div>
           </div>
         </article>
 
-        <article class="gallery-post">
+        <article class="photo gallery__photo">
           <h3 class="visually-hidden">Сообщение пользователя Надежда</h3>
 
-          <a class="gallery-post__link" href="#">
+          <a class="photo__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-6-desktop@1x.webp 1x, img/content/photo-6-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-6-tablet@1x.jpg.webp 1x, img/content/photo-6-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-6-tablet@1x.webp 1x, img/content/photo-6-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-6-mobile@1x.webp 1x, img/content/photo-6-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-6-desktop@1x.jpg 1x, img/content/photo-6-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-6-tablet@1x.jpg 1x, img/content/photo-6-tablet@2x.jpg 2x">
-              <img src="img/content/photo-6-mobile@1x.jpg" srcset="img/content/photo-6-mobile@2x.jpg 2x" alt="Фото 6">
+              <img class="photo__image" src="img/content/photo-6-mobile@1x.jpg" srcset="img/content/photo-6-mobile@2x.jpg 2x" alt="Фото 6">
             </picture>
           </a>
 
-          <div class="gallery-post__content">
-            <div class="gallery-post__author">
-              <b class="gallery-post__author-name">Надежда</b>
-              <time class="gallery-post__date" datetime="2017-09-20T22:00">(45 часов назад)</time>
+          <div class="photo__content">
+            <div class="photo__author">
+              <b class="photo__author-name">Надежда</b>
+              <time class="photo__date" datetime="2017-09-20T22:00">(45 часов назад)</time>
             </div>
 
-            <p class="gallery-post__text">Всем GM и взаимные лайки!</p>
+            <p class="photo__text">Всем GM и взаимные лайки!</p>
 
-            <div class="gallery-post__likes">
-              <button class="gallery-post__like-btn" type="button">
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button">
                 <span class="visually-hidden">Нравится!</span>
               </button>
 
-              <span class="gallery-post__like-count">Нравится: 2560</span>
+              <span class="photo__like-count">Нравится: 2560</span>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="post-new">
-      <h2 class="visually-hidden">Добавить новое сообщение</h2>
+    <section class="photo-editor">
+      <h2 class="visually-hidden">Добавить новую фотографию</h2>
 
-      <p class="post-new__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="photo-editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
 
-      <div class="post-new__wrapper">
-        <form class="post-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="post-form__preview">
+      <div class="photo-editor__wrapper">
+        <form class="form-photo" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form-photo__preview">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/content/photo-7-desktop@1x.webp 1x, img/content/photo-7-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-7-tablet@1x.jpg.webp 1x, img/content/photo-7-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/content/photo-7-tablet@1x.webp 1x, img/content/photo-7-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/content/photo-7-mobile@1x.webp 1x, img/content/photo-7-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/content/photo-7-desktop@1x.jpg, img/content/photo-7-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/content/photo-7-tablet@1x.jpg, img/content/photo-7-tablet@2x.jpg 2x">
-              <img src="img/content/photo-7-mobile@1x.jpg" srcset="img/content/photo-7-mobile@2x.jpg 2x" alt="Фото 7">
+              <img class="form-photo__image" src="img/content/photo-7-mobile@1x.jpg" srcset="img/content/photo-7-mobile@2x.jpg 2x" alt="Фото 7">
             </picture>
           </div>
 
-          <div class="post-form__content">
-            <div class="post-form__filters">
-              <div class="post-form__filters-buttons">
-                <button class="post-form__filter-btn post-form__filter-btn--current" type="button">
+          <div class="form-photo__content">
+            <div class="form-photo__filters">
+              <div class="form-photo__filters-buttons">
+                <button class="form-photo__filter-button form-photo__filter-button--active" type="button">
                   <span class="visually-hidden">Обрезка</span>
-                  <svg class="post-form__icon" width="44" height="44">
+                  <svg class="form-photo__icon" width="44" height="44">
                     <use xlink:href="img/symbols.svg#icon-editor-crop"></use>
                   </svg>
                 </button>
 
-                <button class="post-form__filter-btn" type="button">
+                <button class="form-photo__filter-button" type="button">
                   <span class="visually-hidden">Заливка</span>
-                  <svg class="post-form__icon" width="48" height="43">
+                  <svg class="form-photo__icon" width="48" height="43">
                     <use xlink:href="img/symbols.svg#icon-editor-fill"></use>
                   </svg>
                 </button>
 
-                <button class="post-form__filter-btn" type="button">
+                <button class="form-photo__filter-button" type="button">
                   <span class="visually-hidden">Контрастность</span>
-                  <svg class="post-form__icon" width="32" height="32">
+                  <svg class="form-photo__icon" width="32" height="32">
                     <use xlink:href="img/symbols.svg#icon-editor-contrast"></use>
                   </svg>
                 </button>
               </div>
 
-              <div class="post-form__filters-scales">
-                <div class="post-form__scale-wrapper post-form__scale-wrapper--current">
-                  <svg class="post-form__filter-icon post-form__filter-icon--crop" width="44" height="44">
+              <div class="form-photo__scale-wrapper form-photo__scale-wrapper--current">
+                <div class="form-photo__icon-wrapper">
+                  <svg class="form-photo__filter-icon form-photo__filter-icon--crop" width="44" height="44">
                     <use xlink:href="img/symbols.svg#icon-editor-crop"></use>
                   </svg>
-
-                  <div class="post-form__filter-scale post-form__filter-scale--crop">
-                    <div class="post-form__handle post-form__handle--crop"></div>
-                  </div>
                 </div>
 
-                <div class="post-form__scale-wrapper">
-                  <svg class="post-form__filter-icon post-form__filter-icon--fill" width="48" height="43">
+                <div class="form-photo__filter-scale form-photo__filter-scale--crop">
+                  <div class="form-photo__handle form-photo__handle--crop"></div>
+                </div>
+              </div>
+
+              <div class="form-photo__scale-wrapper">
+                <div class="form-photo__icon-wrapper">
+                  <svg class="form-photo__filter-icon form-photo__filter-icon--fill" width="48" height="43">
                     <use xlink:href="img/symbols.svg#icon-editor-fill"></use>
                   </svg>
-
-                  <div class="post-form__filter-scale">
-                    <div class="post-form__handle post-form__handle--fill"></div>
-                  </div>
                 </div>
 
-                <div class="post-form__scale-wrapper">
-                  <svg class="post-form__filter-icon post-form__filter-icon--contrast" width="32" height="32">
+                <div class="form-photo__filter-scale">
+                  <div class="form-photo__handle form-photo__handle--fill"></div>
+                </div>
+              </div>
+
+              <div class="form-photo__scale-wrapper">
+                <div class="form-photo__icon-wrapper">
+                  <svg class="form-photo__filter-icon form-photo__filter-icon--contrast" width="32" height="32">
                     <use xlink:href="img/symbols.svg#icon-editor-contrast"></use>
                   </svg>
+                </div>
 
-                  <div class="post-form__filter-scale post-form__filter-scale--contrast">
-                    <div class="post-form__handle post-form__handle--contrast"></div>
-                  </div>
+                <div class="form-photo__filter-scale form-photo__filter-scale--contrast">
+                  <div class="form-photo__handle form-photo__handle--contrast"></div>
                 </div>
               </div>
             </div>
 
-            <div class="post-form__buttons">
-              <button class="post-form__button btn btn--rounded-corners btn--red" type="submit">Запостить</button>
-              <button class="post-form__button btn btn--rounded-corners btn--gray" type="reset">Отмена</button>
+            <div class="form-photo__buttons">
+              <button class="form-photo__button button button--rounded button--red" type="submit">Запостить</button>
+              <button class="form-photo__button button button--rounded button--gray" type="reset">Отмена</button>
             </div>
           </div>
         </form>
@@ -377,10 +387,10 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
-        <svg class="page-footer__icon page-footer__icon--mobile">
+        <svg class="page-footer__image page-footer__image--mobile">
           <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
         </svg>
-        <svg class="page-footer__icon page-footer__icon--tablet">
+        <svg class="page-footer__image page-footer__image--tablet">
           <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
         </svg>
       </a>

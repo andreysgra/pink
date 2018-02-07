@@ -13,13 +13,33 @@ a {
   color: inherit;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   overflow: hidden;
   margin: -1px;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
   border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.mobile-hidden {
+  display: none;
+
+  @media @tablet {
+    display: inline;
+  }
+}
+
+.tablet-hidden {
+  @media @tablet {
+    display: none;
+  }
+
+  @media @desktop {
+    display: inline;
+  }
 }

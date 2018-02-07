@@ -1,19 +1,13 @@
-.price-table {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.table-price {
   width: 834px;
   border-spacing: 0;
 
   @media @tablet {
-    position: static;
-    left: auto;
-    transform: none;
     width: 100%;
   }
 }
 
-.price-table__header {
+.table-price__header {
   position: relative;
   padding-top: 17px;
   padding-bottom: 21px;
@@ -23,8 +17,8 @@
   background-color: @bg-color-header;
 
   @media @tablet {
-    padding-top: 11px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 7px;
   }
 
   @media @desktop {
@@ -86,12 +80,12 @@
   }
 }
 
-.price-table__license-type,
-.price-table__license-price {
+.table-price__license-type,
+.table-price__license-price {
   display: block;
 }
 
-.price-table__license-type {
+.table-price__license-type {
   font-weight: bold;
 
   @media @tablet {
@@ -103,7 +97,7 @@
   }
 }
 
-.price-table__license-price {
+.table-price__license-price {
   font-size: 24px;
   font-weight: 300;
 
@@ -116,19 +110,19 @@
   }
 }
 
-.price-table__cell {
+.table-price__cell {
   padding: 14px 17px 15px 22px;
   border-right: 2px solid @lightgray;
   border-bottom: 2px solid @lightgray;
   background-color: @white;
 
   @media @tablet {
-    padding: 10px 20px 5px 20px;
+    padding: 9px 20px 6px;
     width: 25%;
   }
 
   @media @desktop {
-    padding: 15px 20px 14px 20px;
+    padding: 14px 20px 15px;
   }
 
   &:first-child {
@@ -150,7 +144,7 @@
   }
 }
 
-.price-table__feature {
+.table-price__feature {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -168,10 +162,8 @@
   }
 }
 
-.price-table__feature-value {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
+.table-price__feature-value {
+  display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
