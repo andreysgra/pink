@@ -1,5 +1,14 @@
 .gallery {
   padding-top: 15px;
+  padding-bottom: 5px;
+
+  @media @tablet {
+    padding-top: 38px;
+  }
+
+  @media @desktop {
+    padding-top: 40px;
+  }
 }
 
 .gallery__wrapper {
@@ -11,5 +20,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+
+.gallery__photo {
+  margin-bottom: 20px;
+
+  @media @desktop {
+    margin-bottom: 54px;
+  }
+
+  &--full {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media @tablet {
+      margin-bottom: 50px;
+    }
+
+    @media @desktop {
+      margin-bottom: 50px;
+    }
   }
 }

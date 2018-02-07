@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         options: {
           use: [
             require('imagemin-webp')({
-              quality: 70
+              quality: 80
             })
           ]
         },
