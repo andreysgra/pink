@@ -20,7 +20,7 @@
     "autoprefixer": "^7.2.5",
     "css-mqpacker": "^6.0.2",
     "gh-pages": "^1.1.0",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.2",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -40,7 +40,7 @@
     "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "picturefill": "^3.0.2",
     "svg4everybody": "^2.1.9"
   },
