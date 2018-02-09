@@ -744,43 +744,38 @@ a {
 }
 .page-main__titles {
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
-  padding-top: 42px;
-  padding-bottom: 34px;
+  padding: 42px 20px 34px;
+  max-width: 940px;
 }
 .page-main__title {
   margin: 0 auto;
+  margin-bottom: 31px;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
   text-align: center;
 }
-.page-main__title--bottom {
-  margin-top: 31px;
+.page-main__title:last-of-type {
+  margin-bottom: 0;
 }
 .page-main__contacts {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: 280px;
+  max-width: 960px;
 }
-.page-inner__titles {
+.page-inner__title-wrapper {
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
-  padding-top: 31px;
-  padding-bottom: 20px;
+  padding: 45px 20px 34px;
+  max-width: 940px;
   text-align: center;
 }
 .page-inner__title {
+  margin: 0;
   line-height: 30px;
 }
 .page-inner__wrapper {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 940px;
 }
 .features {
@@ -791,22 +786,25 @@ a {
   background-repeat: no-repeat;
 }
 .features__list {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
-  padding-top: 62px;
-  padding-bottom: 287px;
+  padding: 62px 20px 305px;
+  list-style: none;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: 50% calc(100% + 42px);
   background-size: 157px 320px;
   background-repeat: no-repeat;
 }
 .features__item {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+  width: 280px;
   text-align: center;
   background-position: 50% 0;
   background-repeat: no-repeat;
@@ -818,7 +816,8 @@ a {
   color: #000000;
 }
 .features__item-text {
-  margin-top: 13px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .reviews {
   padding-top: 24px;
@@ -830,7 +829,7 @@ a {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: 280px;
+  max-width: 940px;
 }
 .reviews__slide {
   display: none;
@@ -916,11 +915,9 @@ a {
   background-repeat: no-repeat;
 }
 .price__slider {
-  overflow: hidden;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
+  overflow: hidden;
+  padding: 0 20px;
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -945,6 +942,14 @@ a {
   line-height: 28px;
 }
 .contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding-left: 0;
   list-style: none;
@@ -1031,24 +1036,19 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 20px auto 0;
+  padding: 0 20px;
   width: 280px;
 }
 .gallery__photo {
   margin-bottom: 20px;
-}
-.gallery__photo--full {
-  margin-left: auto;
-  margin-right: auto;
 }
 .photo-editor {
   padding-top: 18px;
 }
 .photo-editor__title {
   margin: 0 auto;
-  width: 280px;
+  max-width: 940px;
   line-height: 30px;
   text-align: center;
 }
@@ -1061,6 +1061,10 @@ a {
           justify-content: center;
   margin-top: 42px;
   background-color: #f2f2f2;
+}
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 41px;
 }
 .page-footer--index {
   display: none;
@@ -1077,11 +1081,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 280px;
-  padding-top: 40px;
-  padding-bottom: 41px;
+  padding: 0 20px;
+  max-width: 940px;
 }
 .page-footer__logo {
   display: block;
@@ -1565,6 +1566,8 @@ a {
 .photo--full {
   position: relative;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
   width: auto;
   max-width: 320px;
 }
@@ -1987,44 +1990,20 @@ a {
     font-size: 18px;
   }
   .page-main__titles {
-    width: 620px;
-  }
-  .page-main__titles {
-    padding-top: 50px;
-    padding-bottom: 48px;
+    padding: 50px 20px 48px;
   }
   .page-main__title {
+    margin-bottom: 0;
     font-size: 40px;
     line-height: 48px;
   }
-  .page-main__title--bottom {
-    margin-top: 0;
-    width: 345px;
-  }
-  .page-main__contacts {
-    width: 620px;
-  }
-  .page-inner__titles {
-    width: 620px;
-  }
-  .page-inner__titles {
-    padding-top: 92px;
-    padding-bottom: 38px;
+  .page-inner__title-wrapper {
+    padding: 92px 50px 38px;
   }
   .page-inner__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 30px;
-    padding-right: 30px;
     font-size: 18px;
   }
   .features__list {
-    width: 620px;
-  }
-  .features__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2032,8 +2011,8 @@ a {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-top: 55px;
-    padding-bottom: 27px;
+    padding: 55px 20px 27px;
+    width: 620px;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
     background-position: 20px 3px;
     background-size: 268px 481px;
@@ -2049,9 +2028,6 @@ a {
   }
   .reviews {
     padding-bottom: 4px;
-  }
-  .reviews__slider {
-    width: 620px;
   }
   .reviews__slide--active {
     display: -webkit-box;
@@ -2114,11 +2090,6 @@ a {
     line-height: 48px;
   }
   .contacts__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-left: -10px;
@@ -2145,9 +2116,6 @@ a {
     padding-top: 38px;
   }
   .gallery__wrapper {
-    width: 620px;
-  }
-  .gallery__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2157,25 +2125,24 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .gallery__photo--full {
-    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 620px;
   }
   .photo-editor {
     padding-top: 39px;
   }
   .photo-editor__title {
-    width: 500px;
     font-size: 18px;
   }
   .photo-editor__wrapper {
     margin-top: 69px;
   }
+  .page-footer {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
   .page-footer--index {
     display: block;
-  }
-  .page-footer__wrapper {
-    width: 620px;
   }
   .page-footer__wrapper {
     -webkit-box-orient: horizontal;
@@ -2188,8 +2155,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 38px;
-    padding-bottom: 38px;
   }
   .page-footer__image--mobile {
     display: none;
@@ -2696,44 +2661,19 @@ a {
     margin-bottom: 56px;
   }
   .page-main__titles {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 940px;
-  }
-  .page-main__titles {
-    padding-top: 67px;
-    padding-bottom: 76px;
+    padding: 67px 10px 76px;
   }
   .page-main__title {
     font-size: 50px;
     line-height: 60px;
   }
-  .page-main__title--bottom {
-    width: 430px;
-  }
   .page-main__contacts {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 940px;
+    padding-left: 0;
+    padding-right: 0;
   }
-  .page-inner__titles {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 940px;
-  }
-  .page-inner__titles {
-    padding-top: 92px;
-    padding-bottom: 48px;
+  .page-inner__title-wrapper {
+    padding: 92px 25px 48px;
     max-width: 800px;
-  }
-  .page-inner__title {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .features__list {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 940px;
   }
   .features__list {
     -webkit-box-orient: horizontal;
@@ -2755,15 +2695,15 @@ a {
     line-height: 30px;
     text-align: center;
   }
-  .features__item:nth-child(1) {
+  .features__item--first {
     background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-size: 292px 302px;
   }
-  .features__item:nth-child(2) {
+  .features__item--second {
     background-image: url("../img/iphone-screen-2-desktop@1x.png");
     background-size: 292px 302px;
   }
-  .features__item:nth-child(3) {
+  .features__item--third {
     background-image: url("../img/iphone-screen-3-desktop@1x.png");
     background-size: 292px 302px;
   }
@@ -2785,7 +2725,6 @@ a {
   .reviews__slider {
     padding-left: 10px;
     padding-right: 10px;
-    width: 940px;
   }
   .reviews__slide {
     margin: 0 auto;
@@ -2832,6 +2771,7 @@ a {
     line-height: 60px;
   }
   .contacts__list {
+    margin: 0;
     padding-top: 56px;
   }
   .contacts__item {
@@ -2869,15 +2809,11 @@ a {
     padding-top: 40px;
   }
   .gallery__wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
     width: 940px;
   }
   .gallery__photo {
     margin-bottom: 54px;
-  }
-  .gallery__photo--full {
-    margin-bottom: 50px;
   }
   .photo-editor {
     padding-top: 0;
@@ -2887,13 +2823,11 @@ a {
     margin-top: 66px;
   }
   .page-footer {
-    padding-top: 34px;
-    padding-bottom: 36px;
+    padding-top: 72px;
+    padding-bottom: 74px;
   }
   .page-footer__wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 940px;
+    padding: 0 10px;
   }
   .page-footer__copyright-text {
     margin-right: 13px;
@@ -3224,13 +3158,13 @@ a {
   .features__list {
     background: none;
   }
-  .features__item:nth-child(1) {
+  .features__item--first {
     background-image: url("../img/iphone-screen-1-desktop@2x.png");
   }
-  .features__item:nth-child(2) {
+  .features__item--second {
     background-image: url("../img/iphone-screen-2-desktop@2x.png");
   }
-  .features__item:nth-child(3) {
+  .features__item--third {
     background-image: url("../img/iphone-screen-3-desktop@2x.png");
   }
   .map {
