@@ -18,11 +18,21 @@
 }
 
 .price__slider {
+  margin: 0 auto;
   overflow: hidden;
-  .container();
-
+  padding: 0 20px;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media @tablet {
+    width: 620px;
+  }
+
+  @media @desktop {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+  }
 }
 
 .price__slider-controls {

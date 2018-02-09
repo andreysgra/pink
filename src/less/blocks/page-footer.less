@@ -1,7 +1,15 @@
 .page-footer {
+  padding-top: 40px;
+  padding-bottom: 41px;
+
+  @media @tablet {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
   @media @desktop {
-    padding-top: 34px;
-    padding-bottom: 36px;
+    padding-top: 72px;
+    padding-bottom: 74px;
   }
 
   &--index {
@@ -17,17 +25,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .container();
-
-  padding-top: 40px;
-  padding-bottom: 41px;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 940px;
 
   @media @tablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 38px;
-    padding-bottom: 38px;
+  }
+
+  @media @desktop {
+    padding: 0 10px;
   }
 }
 

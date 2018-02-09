@@ -1,28 +1,27 @@
 .page-main__titles {
-  .container();
-
-  padding-top: 42px;
-  padding-bottom: 34px;
+  margin: 0 auto;
+  padding: 42px 20px 34px;
+  max-width: 940px;
 
   @media @tablet {
-    padding-top: 50px;
-    padding-bottom: 48px;
+    padding: 50px 20px 48px;
   }
 
   @media @desktop {
-    padding-top: 67px;
-    padding-bottom: 76px;
+    padding: 67px 10px 76px;
   }
 }
 
 .page-main__title {
   margin: 0 auto;
+  margin-bottom: 31px;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
   text-align: center;
 
   @media @tablet {
+    margin-bottom: 0;
     font-size: 40px;
     line-height: 48px;
   }
@@ -32,20 +31,19 @@
     line-height: 60px;
   }
 
-  &--bottom {
-    margin-top: 31px;
-
-    @media @tablet {
-      margin-top: 0;
-      width: 345px;
-    }
-
-    @media @desktop {
-      width: 430px;
-    }
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
 .page-main__contacts {
-  .container();
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 960px;
+
+  @media @desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

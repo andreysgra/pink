@@ -33,13 +33,14 @@
 }
 
 .contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .list-reset();
 
   padding-top: 11px;
 
   @media @tablet {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin-left: -10px;
     margin-right: -10px;
@@ -47,6 +48,7 @@
   }
 
   @media @desktop {
+    margin: 0;
     padding-top: 56px;
   }
 }
