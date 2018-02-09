@@ -14,12 +14,21 @@
 .gallery__wrapper {
   display: flex;
   flex-direction: column;
-  .container();
+  margin: 20px auto 0;
+  padding: 0 20px;
+  width: 280px;
 
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 50px;
+    width: 620px;
+  }
+
+  @media @desktop {
+    padding: 0 10px;
+    width: 940px;
   }
 }
 
@@ -28,18 +37,5 @@
 
   @media @desktop {
     margin-bottom: 54px;
-  }
-
-  &--full {
-    margin-left: auto;
-    margin-right: auto;
-
-    @media @tablet {
-      margin-bottom: 50px;
-    }
-
-    @media @desktop {
-      margin-bottom: 50px;
-    }
   }
 }
