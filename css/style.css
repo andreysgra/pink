@@ -306,18 +306,21 @@ template {
   src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 body {
   margin: 0;
@@ -1824,6 +1827,17 @@ a {
   color: #d22856;
   text-decoration: underline;
 }
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 320px) and (min-resolution: 144dpi) {
+  .page-header {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+  .store {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
+  .features__list {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
+}
 @media (min-width: 660px) {
   .mobile-hidden {
     display: inline;
@@ -2458,6 +2472,20 @@ a {
     width: 620px;
   }
 }
+@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi) {
+  .page-header {
+    background-image: url("../img/bg-back-tablet@2x.jpg");
+  }
+  .store {
+    background-image: url("../img/iphone-hand-tablet@2x.png");
+  }
+  .features__list {
+    background-image: url("../img/iphone-screen-3-tablet@2x.png");
+  }
+  .map {
+    background-image: url("../img/bg-map-tablet@2x.jpg");
+  }
+}
 @media (min-width: 960px) {
   .tablet-hidden {
     display: inline;
@@ -3028,34 +3056,6 @@ a {
     padding-right: 20px;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  .page-header {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-  }
-  .store {
-    background-image: url("../img/iphone-hand-mobile@2x.png");
-  }
-  .features__list {
-    background-image: url("../img/iphone-screen-mobile@2x.png");
-  }
-  .map {
-    background-image: url("../img/bg-map-mobile@2x.jpg");
-  }
-}
-@media (min-width: 660px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 660px) and (min-resolution: 144dpi) {
-  .page-header {
-    background-image: url("../img/bg-back-tablet@2x.jpg");
-  }
-  .store {
-    background-image: url("../img/iphone-hand-tablet@2x.png");
-  }
-  .features__list {
-    background-image: url("../img/iphone-screen-3-tablet@2x.png");
-  }
-  .map {
-    background-image: url("../img/bg-map-tablet@2x.jpg");
-  }
-}
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi) {
   .page-header {
     background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -3082,5 +3082,10 @@ a {
 @media (max-width: 959px) {
   .main-nav--closed .main-nav__list {
     display: none;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .map {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
   }
 }
