@@ -18,8 +18,10 @@
   background-size: image-size("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
 
-  @media @retina {
-    background-image: url("../img/iphone-screen-mobile@2x.png");
+  @media @mobile {
+    @media @retina {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+    }
   }
 
   @media @tablet {

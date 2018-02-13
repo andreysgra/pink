@@ -82,7 +82,14 @@ module.exports = function(grunt) {
           use: [
             require('imagemin-optipng')(),
             require('imagemin-svgo')({
-              plugins: [{removeTitle: true}]
+              plugins: [
+                {removeViewBox: false},
+                {removeTitle: true},
+                {cleanupNumericValues: {
+                    floatPrecision: 0
+                  }
+                }
+              ]
             }),
             require('imagemin-jpegoptim')({
               max: 80,
@@ -149,7 +156,7 @@ module.exports = function(grunt) {
         options: {
           processors: [
             require('autoprefixer')(),
-            require('css-mqpacker')()
+            require('css-mqpacker')({sort: true})
           ]
         },
         src: 'build/css/*.css'
@@ -196,5 +203,7 @@ module.exports = function(grunt) {
 
   // Default tasks.
   grunt.registerTask('serve', ['browserSync', 'watch']);
-  grunt.registerTask('build', ['clean:build', 'copy:build', 'less', 'postcss', 'csso', 'concat', 'uglify', 'imagemin', 'svgstore', 'clean:icons']);
+  grunt.registerTask('style', ['less', 'postcss', 'csso']);
+  grunt.registerTask('images', ['imagemin', 'svgstore', 'clean:icons']);
+  grunt.registerTask('build', ['clean:build', 'copy:build', 'style', 'concat', 'uglify', 'images']);
 };
