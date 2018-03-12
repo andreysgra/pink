@@ -20,7 +20,6 @@
 
 - [Specification.md](Specification.md) — техническое задание проекта.
 
-
 [travis-image]: https://travis-ci.org/andreysgra/pink.svg?branch=master
 [travis-url]: https://travis-ci.org/andreysgra/pink
 [dependency-image]: https://david-dm.org/andreysgra/pink/dev-status.svg?style=flat-square

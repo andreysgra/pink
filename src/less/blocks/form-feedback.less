@@ -435,11 +435,6 @@
   }
 }
 
-.form-feedback__checkbox,
-.form-feedback__radio {
-  display: none;
-}
-
 .form-feedback__label-checkbox {
   &::before {
     content: "";
@@ -513,11 +508,6 @@
     padding-left: 59px;
   }
 
-  &:focus {
-    outline: 2px solid @pink;
-    outline-offset: 1px;
-  }
-
   &:hover::before {
     border-color: @bg-color-header;
   }
@@ -531,10 +521,13 @@
   }
 }
 
-.form-feedback__checkbox:checked + .form-feedback__label-checkbox::after {
-  display: block;
+.form-feedback__checkbox:focus + .form-feedback__label-checkbox,
+.form-feedback__radio:focus + .form-feedback__label-radio {
+  outline: 2px solid @pink;
+  outline-offset: 1px;
 }
 
+.form-feedback__checkbox:checked + .form-feedback__label-checkbox::after,
 .form-feedback__radio:checked + .form-feedback__label-radio::after {
   display: block;
 }
