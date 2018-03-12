@@ -1,8 +1,8 @@
 {
   "name": "pink",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Проект «Пинк» от HTML Academy",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "stylelint": "stylelint src/less/**/*.less --syntax less",
     "test": "grunt lintspaces && npm run stylelint",
@@ -17,7 +17,7 @@
   "author": "Andrey Grachev <andreysgra@gmail.com> (https://github.com/andreysgra)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^8.1.0",
     "css-mqpacker": "^6.0.2",
     "gh-pages": "^1.1.0",
     "grunt": "^1.0.2",
@@ -36,8 +36,8 @@
     "imagemin-jpegoptim": "^5.2.0",
     "imagemin-webp": "^4.1.0",
     "load-grunt-tasks": "^3.5.2",
-    "stylelint": "^9.0.0",
-    "stylelint-config-standard": "^18.1.0"
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
