@@ -1,6 +1,6 @@
 {
   "name": "pink",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Проект «Пинк» от HTML Academy",
   "main": "index.html",
   "scripts": {
@@ -45,8 +45,6 @@
     "svg4everybody": "^2.1.9"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "defaults"
   ]
 }
