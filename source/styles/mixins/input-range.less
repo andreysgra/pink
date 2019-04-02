@@ -1,0 +1,95 @@
+// Стилизация input type["range"]
+.track(@track-w; @track-h) {
+  box-sizing: border-box;
+  border: none;
+  width: @track-w;
+  height: @track-h;
+  background-color: @bg-color-header;
+}
+
+.thumb(@thumb-d) {
+  box-sizing: border-box;
+  border: 2px solid @pink;
+  width: @thumb-d;
+  height: @thumb-d;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+}
+
+.range-active() {
+  background-color: @pink;
+}
+
+.range-focus() {
+  outline: 1px dashed @pink;
+  outline-offset: 0;  // в Chrome значение равно -2px
+}
+
+.input-range(@track-w; @track-h; @thumb-d) {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &,
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      .range-active();
+    }
+
+    &::-moz-range-thumb {
+      .range-active();
+    }
+
+    &::-ms-thumb {
+      .range-active();
+    }
+  }
+
+  &:focus {
+    .range-focus();
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track(@track-w; @track-h);
+  }
+
+  &::-moz-range-track {
+    .track(@track-w; @track-h);
+  }
+
+  &::-ms-track {
+    color: transparent;
+    .track(@track-w; @track-h);
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: 0.5 * (@track-h - @thumb-d);
+    .thumb(@thumb-d);
+  }
+
+  &::-moz-range-thumb {
+    .thumb(@thumb-d);
+  }
+
+  &::-ms-thumb {
+    margin-top: 0;
+    .thumb(@thumb-d);
+  }
+
+  &::-ms-fill-lower {
+    background-color: transparent;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  &::-moz-focus-outer {
+    border: none;
+  }
+}
