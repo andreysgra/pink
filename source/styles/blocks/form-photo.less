@@ -1,0 +1,266 @@
+.form-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 29px;
+  background-color: @silver;
+
+  @media @tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 29px;
+  }
+
+  @media @desktop {
+    padding: 41px 60px 57px 80px;
+  }
+}
+
+.form-photo__image {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 374px;
+  background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-position: 50% 0;
+  background-size: image-size("../img/photo-road-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @media @retina {
+    background-image: url("../img/photo-road-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    margin-top: 16px;
+    width: 300px;
+    height: 400px;
+    background-image: url("../img/photo-road-tablet@1x.jpg");
+    background-size: image-size("../img/photo-road-tablet@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/photo-road-tablet@2x.jpg");
+    }
+  }
+
+  @media @tablet-only {
+    margin-left: auto;
+  }
+
+  @media @desktop {
+    margin-left: 0;
+    background-image: url("../img/photo-road-desktop@1x.jpg");
+    background-size: image-size("../img/photo-road-desktop@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/photo-road-desktop@2x.jpg");
+    }
+  }
+}
+
+.form-photo__controls {
+  box-sizing: border-box;
+
+  @media @tablet {
+    margin-top: 0;
+    margin-left: auto;
+    width: 275px;
+  }
+
+  @media @tablet-only {
+    margin-right: auto;
+  }
+
+  @media @desktop {
+    margin-right: 0;
+    width: 410px;
+  }
+}
+
+.form-photo__filters {
+  padding: 42px 20px 38px;
+
+  @media @tablet {
+    margin-bottom: 66px;
+    padding: 0;
+  }
+
+  @media @desktop {
+    margin-bottom: 145px;
+  }
+}
+
+.form-photo__filters-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 240px;
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.form-photo__icon {
+  display: block;
+  fill: fade(@bg-color-header, 30%);
+  pointer-events: none;
+
+  &--crop {
+    @media @tablet {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media @desktop {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &--fill {
+    @media @tablet {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media @desktop {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &--contrast {
+    @media @tablet {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media @desktop {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.form-photo__icon-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    width: 27px;
+    height: 27px;
+  }
+
+  @media @desktop {
+    width: 48px;
+    height: 48px;
+  }
+
+  & .form-photo__icon {
+    fill: @pink;
+  }
+}
+
+.form-photo__filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--current .form-photo__icon {
+    fill: @pink;
+  }
+
+  &:focus {
+    outline: 1px dashed @pink;
+  }
+
+  &:not(&--current):hover {
+    & .form-photo__icon {
+      fill: fade(@bg-color-header, 50%);
+    }
+  }
+}
+
+.form-photo__filter {
+  position: relative;
+  display: none;
+  align-items: center;
+  height: 72px;
+
+  @media @tablet {
+    display: flex;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+    width: ~"calc(100% + 40px * 2)";
+    height: 1px;
+    background-color: @gray;
+
+    @media @tablet {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &--current {
+    display: flex;
+  }
+}
+
+.form-photo__filter-range {
+  .input-range(100%; 2px; 14px);
+
+  margin-left: auto;
+  width: 100%;
+  height: 14px;
+
+  @media @tablet {
+    margin-right: 18px;
+    width: 202px;
+  }
+
+  @media @desktop {
+    margin-right: 30px;
+    width: 288px;
+  }
+}
+
+.form-photo__buttons {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.form-photo__button {
+  margin-bottom: 13px;
+  width: 100%;
+
+  @media @tablet {
+    margin-bottom: 26px;
+    width: 260px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+    width: 45%;
+  }
+}

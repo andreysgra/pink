@@ -1,0 +1,16 @@
+// Файл для правильного порядка media queries после обработки csso с опцией forceMediaMerge: true
+.dummy {
+  display: none;
+
+  @media @tablet {
+    display: none;
+  }
+
+  @media @tablet-only {
+    display: none;
+  }
+
+  @media @desktop {
+    display: none;
+  }
+}
