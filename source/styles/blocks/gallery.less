@@ -1,0 +1,35 @@
+.gallery {
+  padding-top: 15px;
+
+  @media @tablet {
+    padding-top: 39px;
+  }
+}
+
+.gallery__photo-wrapper {
+  margin: 20px auto -20px;
+  padding: 0 20px;
+  width: 280px;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 620px;
+  }
+
+  @media @desktop {
+    margin-bottom: -54px;
+    padding: 0 10px;
+    width: 940px;
+  }
+}
+
+.gallery__photo {
+  margin: 0 0 20px 0;
+
+  @media @desktop {
+    margin: 0 0 54px 0;
+  }
+}

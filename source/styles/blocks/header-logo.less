@@ -1,0 +1,58 @@
+.header-logo {
+  display: block;
+  width: 74px;
+  height: 24px;
+  color: @white;
+
+  @media @tablet {
+    width: 146px;
+    height: 40px;
+  }
+
+  &[href]:hover {
+    color: @pink;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.header-logo__image {
+  display: block;
+  width: 74px;
+  height: 24px;
+  fill: currentColor;
+  pointer-events: none;
+
+  @media @tablet {
+    width: 146px;
+    height: 40px;
+  }
+
+  &--mobile {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet {
+      display: block;
+    }
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
+  }
+}

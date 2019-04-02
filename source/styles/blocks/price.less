@@ -1,0 +1,49 @@
+.price {
+  padding-top: 91px;
+  padding-bottom: 32px;
+  background-color: @silver;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 100% 25px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @media @tablet {
+    padding-top: 86px;
+    padding-bottom: 69px;
+    background-size: 100% 50px;
+  }
+
+  @media @desktop {
+    padding-top: 147px;
+    padding-bottom: 95px;
+    background-size: 100% 80px;
+  }
+}
+
+.price__slider {
+  overflow: hidden;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__slider-controls {
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.price__table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: left 0.4s linear;
+
+  @media @tablet {
+    position: static;
+    left: auto;
+    transform: none;
+  }
+}

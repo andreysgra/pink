@@ -1,0 +1,36 @@
+.footer-logo {
+  display: block;
+  width: 146px;
+  height: 40px;
+  color: @bg-color-header;
+
+  &[href]:hover {
+    color: @pink;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.footer-logo__image {
+  display: block;
+  width: 146px;
+  height: 40px;
+  fill: currentColor;
+  pointer-events: none;
+
+  &--mobile {
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet {
+      display: block;
+    }
+  }
+}
