@@ -1,0 +1,94 @@
+.main-nav {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
+    background-color: transparent;
+  }
+}
+
+.main-nav__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 20px 21px;
+
+  @media @tablet {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
+
+  @media @desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  display: none;
+  align-self: flex-end;
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height: 24px;
+  color: @white;
+  background-color: transparent;
+
+  @media @desktop {
+    display: none;
+  }
+
+  &:hover,
+  &:active {
+    color: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    width: 28px;
+    height: 4px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &--off {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: none;
+      width: 50px;
+      height: 4px;
+      background-color: currentColor;
+      box-shadow: 0 10px 0 0 currentColor, 0 20px 0 0 currentColor;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &--js {
+    display: block;
+  }
+}

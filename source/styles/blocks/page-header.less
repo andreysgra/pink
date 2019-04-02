@@ -1,0 +1,112 @@
+.page-header {
+  position: relative;
+  background-color: @bg-color-header;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 259px;
+  background-size: image-size("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  color: @white;
+
+  @media @retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 256px;
+    background-size: image-size("../img/bg-back-tablet@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-size: image-size("../img/bg-back-desktop@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  &--js {
+    padding-top: 66px;
+    background-position: 50% 0;
+
+    @media @tablet {
+      padding-top: 110px;
+      background-position: 50% 0;
+    }
+
+    @media @desktop {
+      padding-top: 0;
+    }
+  }
+}
+
+.page-header__nav-wrapper {
+  background-color: @bg-color-header;
+
+  @media @desktop {
+    background-color: fade(@black, 30%);
+  }
+
+  &--js {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    @media @desktop {
+      position: static;
+    }
+  }
+
+  &--transparent {
+    background-color: fade(@black, 30%);
+  }
+}
+
+.page-header__main-nav {
+  margin: 0 auto;
+}
+
+.page-header__store {
+  margin: 0 auto;
+}
+
+.page-header__title-wrapper {
+  padding: 15px 20px 40px;
+  min-height: 171px;
+
+  @media @tablet {
+    padding-top: 36px;
+    padding-bottom: 46px;
+    min-height: 330px;
+  }
+
+  @media @desktop {
+    padding-top: 29px;
+    padding-bottom: 67px;
+    min-height: 284px;
+  }
+}
+
+.page-header__title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+
+  @media @tablet {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
