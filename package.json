@@ -1,6 +1,6 @@
 {
   "name": "pink",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Проект «Пинк» от HTML Academy",
   "main": "gulpfile.js",
   "scripts": {
@@ -61,7 +61,10 @@
     "svg4everybody": "^2.1.9"
   },
   "browserslist": [
-    "defaults"
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not OperaMini all"
   ],
   "husky": {
     "hooks": {
